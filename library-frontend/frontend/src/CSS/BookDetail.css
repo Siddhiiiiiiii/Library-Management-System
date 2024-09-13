@@ -1,0 +1,98 @@
+.book-detail-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px; /* Space between book info and the issue form */
+  }
+  
+  .book-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex: 1; /* Allows book info to take remaining space */
+    max-width: 70%; /* Restricts width to prevent overflow */
+  }
+  
+  .book-image {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .book-details {
+    max-width: 100%; /* Allow book details to utilize full width available */
+  }
+  
+  .issue-form {
+    max-width: 300px;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center contents within the form */
+    margin-left: 20px; /* Space between book info and form */
+  }
+  
+  .issue-form h2 {
+    margin-bottom: 15px;
+  }
+  
+  .issue-form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Ensure form takes full width of the container */
+  }
+  
+  .issue-form label {
+    margin-bottom: 10px;
+  }
+  
+  .issue-form input[type="text"],
+  .issue-form input[type="password"],
+  .issue-form input[type="date"] {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 20px); /* Ensure inputs fit within the form */
+  }
+  
+  .issue-form button {
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    width: 100%; /* Ensure button fits within the form */
+  }
+  
+  .issue-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Media Query for responsiveness */
+  @media (max-width: 768px) {
+    .book-detail-container {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      align-items: center;
+    }
+  
+    .book-info {
+      width: 100%;
+      max-width: 100%;
+      text-align: center; /* Center text for smaller screens */
+      margin-bottom: 20px; /* Add margin below book info */
+    }
+  
+    .issue-form {
+      width: 100%;
+      max-width: 400px; /* Adjust max-width for smaller screens */
+      margin-left: 0; /* Remove margin for smaller screens */
+    }
+  }
+  
